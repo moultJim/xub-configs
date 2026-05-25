@@ -1,0 +1,26 @@
+# Recursive search current directory for string.
+rg "error_code"
+
+# Search in specific file or folder:
+rg "TODO" ./src/main.rs
+
+# Whole word match: 
+rg -w "main"
+
+# Case-insensitive search (unless have UC in term):
+rg -i "config"
+
+# Search specific file types: 
+rg "console\.log" --type js
+
+# Search by file ext, using glob patterns:
+rg "SQL_Query" -g "*.py"
+
+# Exclude a directory and its subs:
+rg "express" --glob "!node_modules/*"
+
+# Search hidden files (usu ignored by default):
+rg --hidden "api_key"
+
+# Search everything, ignoring default filters: 
+rg -uuu "search_term"

@@ -1,0 +1,71 @@
+# start i3 from CLI
+startx i3
+
+# open a terminal
+$mod+<Enter>
+
+# open chrome
+$mod+b
+
+# open zim
+$mod+z
+
+# open rofi -window mode 
+$mod+d
+
+# enter or leave resize mode
+$mod+r
+
+# exit i3
+$mod+shift+e
+
+# restart i3 in place
+$mod+shift+r
+
+# reload config file
+$mod+shift+c
+
+# kill window (normal close for most apps)
+$mod+shift+q
+
+# tabbed layout
+$mod+w
+
+# switch between vertical vs horizontal layout 
+$mod+e
+
+# stacked layout
+$mod+s
+
+# toggle fullscreen
+$mod+f
+
+# move window in arrow direction
+$mod+shift+<direction key>
+
+# move window to workspace <#0-9>
+$mod+shift+<#>
+
+# go to workspace <#0-9>
+$mod+<#>
+
+# toggle focus mode
+$mod+<space>
+
+# toggle floating window
+$mod+shift+<space>
+
+# focus left
+$mod+j
+
+# focus down
+$mod+k
+
+# focus up
+$mod+l
+
+# focus right
+$mod+;
+
+# focus parent
+$mod+a
