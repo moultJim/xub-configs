@@ -241,3 +241,6 @@ client.urgent           #f38ba8 #1e1e2e #cdd6f4 #f38ba8   #f38ba8
 # polybar start
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
+# ensure keyboard map is correct
+exec --no-startup-id setxkbmap us
+

@@ -1,0 +1,26 @@
+﻿Basics
+One-line comment: <!- txt -->
+Multi-line comments: html above/below
+Headers: # H1, ## H2, ### H3
+Bold: **Bold** or __Bold__
+Italics: *Italics* or _Italics_
+Strikethrough: ~~Strike~~
+Blockquote: > Quote
+Horizontal Rule: --- 
+
+Lists & Links
+Unordered List: - Item or * Item
+Ordered List: 1. Item
+Links: [Link Name](https://example.com)
+Image: ![Alt Text](image_url.jpg) 
+
+Code & Tables
+Inline Code: `code`
+Code Block: ```
+Table:
+markdown
+{content: }
+         
+Special
+Task List: - [ ] To-do and - [x] Done
+Escape Character: \* (displays * instead of italics)
