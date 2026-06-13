@@ -55,7 +55,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+#bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec ghostty
 
 # start chrome
 bindsym $mod+b exec --no-startup-id google-chrome-stable --password-store=basic
@@ -240,6 +241,16 @@ client.urgent           #f38ba8 #1e1e2e #cdd6f4 #f38ba8   #f38ba8
 
 # polybar start
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# start clipman
+exec --no-startup-id xfce4-clipman
+# Press Mod key + Shift + H to pop open your Clipman history menu instantly
+bindsym $mod+Shift+h exec --no-startup-id xfce4-popup-clipman
+
+# cheatsheet picker
+# Press Mod Key + Alt + C to open the cheatsheet search menu
+bindsym $mod+mod1+c exec --no-startup-id ~/.local/bin/i3-cheatsheet-picker.sh
+
 
 # ensure keyboard map is correct
 exec --no-startup-id setxkbmap us
