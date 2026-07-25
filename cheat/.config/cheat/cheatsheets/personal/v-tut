@@ -1,0 +1,54 @@
+x     del char @cursor
+A     Append end of line (ins)
+d     Delete
+  w     word
+  d     line
+  0     to start of line
+  $     to end of line
+  d2w   2 words
+  2dd   2 lines
+w     Move to start next word
+e     Move to end current word
+0     Move to start current line
+$     Move to end current line
+o     Open line below @ (ins)
+O     Open line above @ (ins)
+9     Num b4 motion (w,e,hjkl)
+u     Undo last cmd (stack)
+Ctl-R Redo undo (stack)
+p     Put last cp/del below (stack)
+P     Put above
+r     Replace char @cursor
+c     Change (ins)
+  w   word
+  e   end of word
+  $   end of line
+gg    move to top of file
+G     move to bottom of file
+9G    move to line 9
+/ x   search for x phrase
+  n   next match
+  N   match opposite direction
+? x   search x backwards to start 
+Ctl-o go back prior spot
+Ctl-i go fwd a spot
+%     find matching ] } )
+-- Command mode (preceding :)
+s/old/new/g sub global in line
+#,#s/old/new/g sub global range
+    can select range visual mode
+%s/old/new/g sub global file
+%s/old/new/gc confirm each sub
+! x  execute terminal cmd x
+w x   save buffer as file x
+r x   retrieve (import) x above @
+r !ls retrieve output of cmd
+-- Visual mode (start v [motion])
+--   :'<,'>  will appear cmd-line
+:w x  save selected as file x
+d     delete selection (750)
+
+
+
+
+                  

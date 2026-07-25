@@ -1,0 +1,51 @@
+[mgr]
+# Set pane layout ratio (parent dir, current dir, preview)
+ratio = [1, 3, 4]
+# Sort files naturally
+sort_by = "natural"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+show_hidden = true
+
+[preview]
+max_width = 1000
+max_height = 1000
+
+[opener]
+edit = [
+        { run = 'NVIM_APPNAME="nvim-jm" nvim "$@"', block = true, desc = "Neovim" }
+]
+
+[open]
+#rules = [
+#{ url = "*", use = "edit" }
+#]
+rules = [
+	# Your existing extension matches go here...
+	{ url = "*.txt", use = "edit" },
+	{ url = "*.md", use = "edit" },
+
+	# Catch-all rules for files with no extension
+	{ mime = "text/plain", use = "edit" },
+	{ mime = "application/octet-stream", use = "edit" }
+]
+
+[plugin]
+prepend_previewers = [
+  # Preview Markdown files with glow via piper
+  { url = "*.md", run = 'piper -- glow -s dark "$1"' },
+
+# View directory trees with eza via piper
+  { url = "*/", run = 'piper -- eza -TL=3 --color=always --group-directories-first "$1"' },
+
+  # Catches common text files without extensions (e.g., README, TODO)
+  { mime = "text/plain", run = "code" },
+
+  # Catches extensionless scripts (Yazi checks internal magic bytes)
+  { mime = "application/x-executable", run = "code" },
+  { mime = "application/x-shellscript", run = "code" },
+
+  # Optional: Catches completely unknown binary fallback files
+  { mime = "application/octet-stream", run = "code" }
+]

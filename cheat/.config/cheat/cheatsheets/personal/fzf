@@ -1,0 +1,10 @@
+Alt-c sub-dirs of wd
+cd ** choose dir
+cp ** choose file
+jv -o fzf choose file
+jv -o fzf --preview 'less {}'
+ls | fzf
+jv $(fzf --preview='bat --color=always {}")
+cd ~/dotfiles/**<tab>
+<cmd>Ctrl-t insert file/dir
+ctrl-r history search

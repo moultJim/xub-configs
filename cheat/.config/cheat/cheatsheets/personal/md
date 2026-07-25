@@ -16,10 +16,8 @@ Image: ![Alt Text](image_url.jpg)
 
 Code & Tables
 Inline Code: `code`
-Code Block: ```
-Table:
-markdown
-{content: }
+Code Block: ``` code ```
+Table: |  | | headings ----
          
 Special
 Task List: - [ ] To-do and - [x] Done

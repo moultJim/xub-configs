@@ -1,0 +1,14 @@
+[mgr]
+prepend_keymap = [
+    # Fuzzy find files/folders in current subtree with fzf
+    { on = [ "f" ], run = "plugin fzf", desc = "Fuzzy find files/dirs" },
+
+    # Jump to directory in zoxide history
+    { on = [ "z" ], run = "plugin zoxide", desc = "Jump using zoxide" },
+
+    # Map 'g c' to jump to ~/.config
+    { on = [ "g", "c" ], run = "cd ~/.config", desc = "Go to config dir" },
+
+    # Remap integrated help menu to '?'
+    { on = [ "?" ], run = "help", desc = "Open help menu" }
+]

@@ -1,0 +1,33 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """$directory$git_branch$character"""
+
+# Tell Starship to use your Catppuccin Mocha palette globally
+palette = "catppuccin_mocha"
+
+[directory]
+style = "bold blue"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+# Clean, uniform Vi mode symbols styled with your palette
+vimcmd_symbol = "[❮](bold mauve)"
+vimcmd_replace_one_symbol = "[❮](bold pink)"
+vimcmd_replace_symbol = "[❮](bold flamingo)"
+vimcmd_visual_symbol = "[❮](bold yellow)"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+green = "#a6e3a1"
+
