@@ -1,0 +1,17 @@
+# Base libraries and external tools
+olivierverdier/zsh-git-prompt
+zsh-users/zsh-completions
+
+# Keyboard interface modes
+jeffreytse/zsh-vi-mode
+
+#Complete initialization wrapper
+#Runs compinit to initialize definitions loaded above
+mattmc3/ez-compinit
+
+# Tab menu enhancements
+Aloxaf/fzf-tab
+
+# Core interface wrappers (always last)
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions

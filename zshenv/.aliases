@@ -1,0 +1,37 @@
+alias upsys='sudo apt update && sudo apt upgrade -y'
+alias dwnsys='sudo shutdown -h now'
+#alias fcmds='cat ~/.fcmds | fzf | xargs -I {} bash -c "{}"'
+#alias fcmds='cat ~/.fcmds | fzf | while read -r cmd; do eval "$cmd"; done'
+alias fcmds='cmd=$(fzf < ~/.fcmds) && eval "$cmd"'
+alias tailstat='tailscale status'
+alias help=run-help
+alias jv='NVIM_APPNAME=nvim-jm nvim'
+alias mm='NVIM_APPNAME=nvim-mm nvim'
+alias ks='NVIM_APPNAME=nvim-ks nvim'
+alias lz='NVIM_APPNAME=nvim-lz nvim'
+alias ez='eza -la --icons=always --color=always --git --group-directories-last --no-user --no-time'
+alias tree='eza --icons=always --color=always --long --git'
+alias cat="bat"
+alias catplain="bat --style=plain --pager=never"
+alias cd="z"
+alias xi="bash xinp.sh"
+alias xcopy="xclip -sel clip"
+alias xpaste="xclip -o -sel clip"
+alias nonot="dunstctl close-all"
+
+if [[ "$HOST" == "xub" ]]; then
+	# --- Tailscale & Network Helpers ---
+	alias srv="ssh jim@svr1"
+	alias wake-server='ssh root@100.74.107.23 "etherwake -i br-lan c4:34:6b:4e:4f:ca"'
+	# VNC over SSH: Connect localhost after running.
+	alias vnc-tunnel="ssh -L 5901:localhost:5901 jim@svr1"
+	# other xub-specific
+	alias nas='mount /mnt/brume_nas && cd /mnt/brume_nas'
+elif [[ "$HOST" == "penguin" ]]; then
+	# brume_nas mounting
+	alias mountnas='rclone --no-check-certificate mount brume:disk1_part1 /mnt/brume_nas --vfs-cache-mode writes --dir-cache-time 0s --daemon'
+	sudo ip link set dev eth0 mtu 1200
+  alias cpaste='wl-paste'
+  alias sysup='sudo apt update && sudo apt dist-upgrade -y'
+  alias cddl='cd /mnt/chromeos/removable/sd'
+fi
