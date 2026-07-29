@@ -36,6 +36,10 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xinput set-prop "Synaptics TM3096-001" "libinput Tapping Enabled" 0
 exec --no-startup-id xinput set-prop "Synaptics TM3096-001" "libinput Disable While Typing Enabled" 1
 
+# Want dunst for notification (instead of xfce4-notifyd daemon)
+exec --no-startup-id dunst
+exec --no-startup-id xhost +SI:localuser:$USER
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 

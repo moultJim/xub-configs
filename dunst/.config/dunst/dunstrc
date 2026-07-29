@@ -1,0 +1,20 @@
+[global]
+    # Position the alert in the top right corner
+    origin = top-right
+    offset = 10x10
+    
+    # Define width constraints
+    width = 300
+    height = 150
+    
+    # Show on the currently focused monitor
+    monitor = 0
+
+[urgency_critical]
+    # High-contrast background for visibility
+    background = "#ff5555"
+    foreground = "#f8f8f2"
+    frame_color = "#ff5555"
+    
+    # 0 ensures the window NEVER closes automatically
+    timeout = 0

@@ -1,0 +1,11 @@
+# Fuzzy search tealdeer with live rolling preview
+
+tldr --list | fzf \
+  --preview "tldr {} --color always" \
+  --preview-window=right:65%:wrap \
+  --layout=reverse \
+  --height=80% \
+  --bind "enter:execute(tldr {})" \
+  --header "Press ENTER to view full page in shell" \
+  "$@"
+

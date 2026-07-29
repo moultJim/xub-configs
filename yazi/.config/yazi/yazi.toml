@@ -8,6 +8,9 @@ sort_reverse = false
 sort_dir_first = true
 show_hidden = true
 
+# "round" gives smooth corners; alternatives are "solid", "double", or "thick"
+border_style = { fg = "#89b4fa", char = "round" }
+
 [preview]
 max_width = 1000
 max_height = 1000

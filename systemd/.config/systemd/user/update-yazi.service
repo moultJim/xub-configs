@@ -1,0 +1,13 @@
+[Unit]
+Description=Check and update Yazi from github
+
+[Service]
+Type=oneshot
+ExecStart=/home/jim/.config/scripts/update-yazi.sh
+# Route notifications to display screen 0
+Environment=DISPLAY=:0
+# Point directly to your user's live desktop message bus
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+[Install]
+WantedBy=default.target

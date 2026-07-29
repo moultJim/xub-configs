@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily timer for Yazi source update script
+
+[Timer]
+OnBootSec=15m
+OnUnitActiveSec=1d
+Persistent=true
+
+[Install]
+WantedBy=timers.target

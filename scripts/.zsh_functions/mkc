@@ -1,0 +1,5 @@
+# Make directory (and parents if needed -- tell me)
+#       then change to it
+mkdir -pv "$1"
+cd "$1"
+

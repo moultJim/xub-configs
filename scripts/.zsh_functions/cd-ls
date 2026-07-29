@@ -1,0 +1,12 @@
+# Inside ~/.zsh_functions/cd-ls
+
+# Change directory. If it fails, stop.
+cd "$@" || return
+
+# List directory contents cleanly
+if command -v eza >/dev/null; then
+    eza -l --group-directories-first --icons=auto --no-user --git -a
+else
+    ls -la
+fi
+
