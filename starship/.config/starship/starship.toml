@@ -1,7 +1,7 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """$directory$git_branch$character"""
+format = """$directory$git_branch$line_break$character"""
 
 # Tell Starship to use your Catppuccin Mocha palette globally
 palette = "catppuccin_mocha"

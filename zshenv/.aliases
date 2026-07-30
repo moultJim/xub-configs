@@ -18,6 +18,8 @@ alias xi="bash xinp.sh"
 alias xcopy="xclip -sel clip"
 alias xpaste="xclip -o -sel clip"
 alias nonot="dunstctl close-all"
+alias gh="ghelp.sh"
+alias -- -="cd -"
 
 if [[ "$HOST" == "xub" ]]; then
 	# --- Tailscale & Network Helpers ---

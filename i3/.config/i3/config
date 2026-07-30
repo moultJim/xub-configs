@@ -40,6 +40,9 @@ exec --no-startup-id xinput set-prop "Synaptics TM3096-001" "libinput Disable Wh
 exec --no-startup-id dunst
 exec --no-startup-id xhost +SI:localuser:$USER
 
+# Kill the focus following
+focus_follows_mouse no
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -221,7 +224,7 @@ bindsym $mod+r mode "resize"
 # Auto-start core Xfce desktop services
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id xfce4-volumed-pulse
-exec --no-startup-id /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+#exec --no-startup-id /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 
 # Sync system themes with GTK4/Libadwaita apps
 exec --no-startup-id xfsettingsd --replace
@@ -260,9 +263,16 @@ bindsym $mod+Shift+h exec --no-startup-id xfce4-popup-clipman
 
 # cheatsheet picker
 # Press Mod Key + Alt + C to open the cheatsheet search menu
-bindsym $mod+mod1+c exec --no-startup-id ~/.local/bin/i3-cheatsheet-picker.sh
+bindsym $mod+mod1+c exec --no-startup-id ~/.config/scripts/i3-cheatsheet-picker.sh
 
 
 # ensure keyboard map is correct
 exec --no-startup-id setxkbmap us
+
+# 1. Hotkey assignment to toggle the script launcher
+#bindsym $mod+g exec --no-startup-id ~/.config/scripts/toggle_scratchpad.sh
+
+# 2. Intercept the window, move it to the scratchpad backdrop yard, then size/center it
+#for_window [title="DocDashboard"] move scratchpad, floating enable, resize set 1100 px 700 px, move position center
+
 
