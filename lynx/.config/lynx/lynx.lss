@@ -1,0 +1,25 @@
+# Catppuccin Mocha Link Color Style for Lynx
+# Format: element:bold:foreground:background
+
+normal:normal:text:base
+default:normal:text:base
+link:bright:brightblue:base
+link.green:bright:green:base
+status:reverse:mantle:text
+alert:bold:red:base
+item:normal:text:base
+menu.frame:normal:surface0:base
+menu.bg:normal:text:base
+menu.nsel:normal:text:base
+menu.sel:reverse:base:mauve
+help:normal:subtext1:base
+heading:bold:sapphire:base
+title:bold:lavender:base
+edit.active:normal:base:text
+edit.arrow:normal:maroon:base
+
+# Color aliases mapped to Mocha hex-approximations for terminal tokens
+# text=white, base=black, brightblue=blue, mauve=magenta, sapphire=cyan
+# Catppuccin Mocha Link Color Style for Lynx
+# Format: element:bold:foreground:background
+

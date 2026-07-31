@@ -5,6 +5,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export BROWSER="google-chrome"
 export TERMINAL="ghostty"
 export DISPLAY=:0
+export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 
 # Check if nvim exists in commands array
 # If not, use vim.
