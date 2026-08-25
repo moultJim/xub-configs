@@ -47,8 +47,13 @@ r !ls retrieve output of cmd
 --   :'<,'>  will appear cmd-line
 :w x  save selected as file x
 d     delete selection (750)
-
-
-
-
-                  
+~~~~~~~~~~~~~~~~~~~
+vis-blk (Ctl-v) :norm I#<sp>    comments all
+viw vaw   visual inside word & visual around word select
+i and a also for "({  c for change; y for yank; d for del 
+:.,.+3!sort    !cli sort, 4 rows starting current(.) [sed]
+:!!jq .        to format json (on crrent line)
+vis-blk :norm I0.  gv to reselect prior  gCtl-a gets numbered rows
+:g to exec ext/int cmd on searched results 
+  :g/TODO/d delete TODO   :g/^$/d delete empty lines
+  :g/error/t$ copy error lines to end

@@ -6,6 +6,7 @@ alias fcmds='cmd=$(fzf < ~/.fcmds) && eval "$cmd"'
 alias tailstat='tailscale status'
 alias help=run-help
 alias jv='NVIM_APPNAME=nvim-jm nvim'
+alias ba='NVIM_APPNAME=nvim-ba nvim'
 alias mm='NVIM_APPNAME=nvim-mm nvim'
 alias ks='NVIM_APPNAME=nvim-ks nvim'
 alias lz='NVIM_APPNAME=nvim-lz nvim'

@@ -1,0 +1,19 @@
+theme = Catppuccin Mocha
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = server
+cursor-style = block
+cursor-style-blink = true
+# Automatically copy highlighted text directly to the system clipboard
+copy-on-select = true
+
+# Ensure Ghostty uses the primary system clipboard instead of a localized buffer
+clipboard-write = allow
+clipboard-read = allow
+
+# Disable prompt markers in zsh config, to avoid conflict with starship prompt
+shell-integration = none
+
+# Allow i3 to quit with no popup for close
+confirm-close-surface = false
+

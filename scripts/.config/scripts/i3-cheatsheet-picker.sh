@@ -11,8 +11,10 @@ if [ -z "$SELECTED_FILE" ]; then
     exit 0
 fi
 
-# 4. Tell i3 to split your current workspace container vertically
-# i3-msg split horizontal
-
-# 5. Launch a new Ghostty window running Neovim with the target file
-ghostty -e nvim "$CHEATSHEET_DIR/$SELECTED_FILE"
+# 4. Prepare nvim launch
+# Check global env variable, set if not                              
+${NVIM_APPNAME:="nvim-jm"}                                           
+export NVIM_APPNAME                                                  
+                                                                     
+# Launch a new Ghostty window running Neovim (jv version) with selected cheatsheet
+/usr/bin/ghostty -e zsh -c "/home/jim/.local/share/bob/nvim-bin/nvim $CHEATSHEET_DIR/$SELECTED_FILE"
