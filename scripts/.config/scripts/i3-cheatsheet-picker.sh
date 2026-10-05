@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # 1. Path to your personal cheatsheets folder
-CHEATSHEET_DIR="$HOME/.config/cheat/cheatsheets/personal"
+CHEATSHEET_DIR="$HOME/chts"
 
 # 2. Get list of files, strip the path, and present them in Rofi
 SELECTED_FILE=$(ls "$CHEATSHEET_DIR" | rofi -dmenu -p "   Cheatsheets" -theme catppuccin-mocha)

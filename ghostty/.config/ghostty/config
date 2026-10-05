@@ -17,3 +17,4 @@ shell-integration = none
 # Allow i3 to quit with no popup for close
 confirm-close-surface = false
 
+

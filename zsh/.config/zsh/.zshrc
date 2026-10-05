@@ -12,6 +12,8 @@ export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 # Add custom directories
 export PATH="$HOME/.local/share/bob/nvim-bin:$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$HOME/.config/scripts:$HOME/.fzf/bin:$PATH"
+export PATH="$HOME/.local/share/lua-language-server/bin:$PATH"
+
 # Bat theme
 export BAT_THEME="Catppuccin Mocha"
 # ==============================================================================

@@ -9,5 +9,11 @@ Environment=DISPLAY=:0
 # Point directly to your user's live desktop message bus
 Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
+# --- ADD THESE TWO LINES TO LOG TO A FILE ---
+StandardOutput=append:/home/jim/.config/scripts/yazi-updater.log
+StandardError=inherit
+# --------------------------------------------
+
 [Install]
 WantedBy=default.target
+

@@ -21,6 +21,8 @@ alias xpaste="xclip -o -sel clip"
 alias nonot="dunstctl close-all"
 alias gh="ghelp.sh"
 alias -- -="cd -"
+alias nvim="/home/jim/.local/share/bob/nvim-bin/nvim"
+alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 
 if [[ "$HOST" == "xub" ]]; then
 	# --- Tailscale & Network Helpers ---
