@@ -1,6 +1,0 @@
-man -k . | fzf | awk '{print $1}' | xargs -r man
-cd "$(fd 'home/jim/dotfiles' -p --type d --max-depth 5 | fzf )" && ls -A
-cd "$( cat /home/jim/.gitdirs | fzf )" && ls -la
-eza -l --color=always --group-directories-last --no-user --no-time
-git status --porcelain -z | fzf -0 -m --read0 --print0 | cut -z -b 4- | sed -z 's/\/$//' | xargs -0 -r git add
-

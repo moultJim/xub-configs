@@ -141,10 +141,10 @@ setopt AUTO_PARAM_SLASH
 [ -f ~/.aliases ] && source ~/.aliases
 
 fpath=(~/.zsh_functions $fpath)
-autoload -Uz mkc
 autoload -Uz up
 autoload -Uz ftldr
 autoload -Uz y
+autoload -Uz gu
 
 # ==============================================================================
 # Prompt Initialization (Must remain at the absolute bottom)

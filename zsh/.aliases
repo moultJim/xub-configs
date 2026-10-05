@@ -1,15 +1,10 @@
 alias upsys='sudo apt update && sudo apt upgrade -y'
 alias dwnsys='sudo shutdown -h now'
-#alias fcmds='cat ~/.fcmds | fzf | xargs -I {} bash -c "{}"'
-#alias fcmds='cat ~/.fcmds | fzf | while read -r cmd; do eval "$cmd"; done'
-alias fcmds='cmd=$(fzf < ~/.fcmds) && eval "$cmd"'
 alias tailstat='tailscale status'
 alias help=run-help
 alias jv='NVIM_APPNAME=nvim-jm nvim'
 alias ba='NVIM_APPNAME=nvim-ba nvim'
 alias mm='NVIM_APPNAME=nvim-mm nvim'
-alias ks='NVIM_APPNAME=nvim-ks nvim'
-alias lz='NVIM_APPNAME=nvim-lz nvim'
 alias ez='eza -la --icons=always --color=always --git --group-directories-last --no-user --no-time'
 alias tree='eza --icons=always --color=always --long --git'
 alias cat="bat"
@@ -20,9 +15,8 @@ alias xcopy="xclip -sel clip"
 alias xpaste="xclip -o -sel clip"
 alias nonot="dunstctl close-all"
 alias gh="ghelp.sh"
-alias -- -="cd -"
+alias gst="git status"
 alias nvim="/home/jim/.local/share/bob/nvim-bin/nvim"
-alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 
 if [[ "$HOST" == "xub" ]]; then
 	# --- Tailscale & Network Helpers ---
