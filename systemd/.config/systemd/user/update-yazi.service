@@ -1,19 +1,13 @@
 [Unit]
-Description=Check and update Yazi from github
+Description=Check and update Yazi from crates.io using binstall
 
 [Service]
 Type=oneshot
-ExecStart=/home/jim/.config/scripts/update-yazi.sh
-# Route notifications to display screen 0
-Environment=DISPLAY=:0
-# Point directly to your user's live desktop message bus
-Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+# Systemd user units allow %h shortcut to represent home directory
+ExecStart=%h/.config/scripts/update-yazi.sh
 
-# --- ADD THESE TWO LINES TO LOG TO A FILE ---
-StandardOutput=append:/home/jim/.config/scripts/yazi-updater.log
+# --- LOG TO A FILE ---
+StandardOutput=append:%h/.config/scripts/yazi-updater.log
 StandardError=inherit
 # --------------------------------------------
-
-[Install]
-WantedBy=default.target
 
