@@ -1,3 +1,0 @@
-# .zsh_function to update local git repo
-git status --porcelain -z | fzf -0 -m --read0 --print0 | \
-  cut -z -b 4- | sed -z 's/\/$//' | xargs -0 -r git add
